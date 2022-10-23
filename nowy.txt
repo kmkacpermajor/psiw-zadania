@@ -1,1 +1,3 @@
-KURWAKURWA halo
+test zapisu
+do pliku
+zapis odczyt
