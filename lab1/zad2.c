@@ -3,8 +3,6 @@
 #include<fcntl.h>
 
 int main(int argc, char* argv[]){
-    char buf[10];
-
     for(int i = 1; i<argc; i++){
         int fd = open(argv[i], O_RDONLY);
 

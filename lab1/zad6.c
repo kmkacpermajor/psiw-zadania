@@ -11,7 +11,7 @@ void pom(int fdr, int fdw, int tryb){
 
     lseek(fdr, -1, SEEK_END);
 
-    while(x = read(fdr, &a, 1)>0){
+    while((x = read(fdr, &a, 1)) > 0){
         buf[i] = a;
 
         if (tryb == 0){

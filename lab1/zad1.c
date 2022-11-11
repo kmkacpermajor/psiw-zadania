@@ -12,7 +12,7 @@ int main(int argc, char* argv[]){
     char buf[10];
     int x;
 
-    while (x=read(fdr, buf, 10)){
+    while ( (x=read(fdr, buf, 10)) ){
         write(fdw, buf, x);
     }
 }

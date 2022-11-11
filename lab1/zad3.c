@@ -10,7 +10,7 @@ int main(int argc, char* argv[]){
     char pom[256];
     int i = 0;
 
-    while(x = read(fd, &a, 1)>0){
+    while( (x = read(fd, &a, 1)) > 0){
         if(a==10){
             int size = i;
             for (int j=0; j<=size; j++)  printf("%c", pom[j]);

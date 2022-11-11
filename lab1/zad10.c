@@ -14,7 +14,7 @@ int main(int argc, char** argv){
     for(int i=1; i<argc-1; i++){
         fdr = open(argv[i], O_RDONLY); 
 
-        while(x = read(fdr, &a, 1) > 0){
+        while((x = read(fdr, &a, 1)) > 0){
             write(fdw, &a, 1);
         }
     }

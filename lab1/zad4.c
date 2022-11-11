@@ -10,7 +10,7 @@ int main(int argc, char* argv[]){
     int max = 0;
     int i = 0;
 
-    while(x = read(fd, &a, 1)>0){
+    while((x = read(fd, &a, 1)) > 0){
         if(a==10){
             if(i>max) max=i;
             i=0;

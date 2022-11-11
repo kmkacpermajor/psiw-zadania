@@ -16,7 +16,7 @@ int main(int argc, char** argv){
     int licznik = 0;
     
     
-    while(x = read(fd, &a, 1) > 0){
+    while((x = read(fd, &a, 1)) > 0){
         if (!((a >= 'a' && a <= 'z') || (a >= 'A' && a <= 'Z') || (a >= '0' && a <= '9') || a == '_')){
             licznik++;
         }
