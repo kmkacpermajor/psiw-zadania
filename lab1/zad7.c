@@ -11,7 +11,7 @@ int main(int argc, char** argv){
     while(x = read(fd, &a, 1) > 0){
         if(!isascii(a)){
             printf("Plik nie jest tekstowy\n");
-            return;
+            return 1;
         }
     }
     printf("Plik jest tekstowy\n");

@@ -18,7 +18,7 @@ int main(int argc, char** argv){
         x2 = read(fd2, &a2, 1);
         if(x2<1 || a!=a2){
             printf("Pliki są różne\n");
-            return;
+            return 1;
         }
     }
 
