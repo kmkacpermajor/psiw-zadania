@@ -5,13 +5,12 @@
 void pom(int fdr, int fdw, int tryb){
     char buf[1024];
     char a;
-    int x;
     int licznik = 0;
     int i=0;
 
     lseek(fdr, -1, SEEK_END);
 
-    while((x = read(fdr, &a, 1)) > 0){
+    while((read(fdr, &a, 1)) > 0){
         buf[i] = a;
 
         if (tryb == 0){

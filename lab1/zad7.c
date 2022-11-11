@@ -5,10 +5,9 @@
 
 int main(int argc, char** argv){
     int fd = open(argv[1], O_RDONLY);
-    int x;
     char a;
 
-    while((x = read(fd, &a, 1)) > 0){
+    while((read(fd, &a, 1)) > 0){
         if(!isascii(a)){
             printf("Plik nie jest tekstowy\n");
             return 1;

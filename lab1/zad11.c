@@ -12,11 +12,10 @@ int main(int argc, char** argv){
     
 
     char a;
-    int x;
     int licznik = 0;
     
     
-    while((x = read(fd, &a, 1)) > 0){
+    while((read(fd, &a, 1)) > 0){
         if (!((a >= 'a' && a <= 'z') || (a >= 'A' && a <= 'Z') || (a >= '0' && a <= '9') || a == '_')){
             licznik++;
         }
