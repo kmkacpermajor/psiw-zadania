@@ -1,12 +1,11 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <string.h>
+#include <stdlib.h>
 
 int main(int argc, char* argv[]){
     int fd1[2];
     int fd2[2];
-    int buf[100];
-    int x;
     int n1 = atoi(argv[1]);
     int n2 = atoi(argv[2]);
 
@@ -17,7 +16,20 @@ int main(int argc, char* argv[]){
         close(fd1[1]);
         close(fd2[1]);
 
-        while(x = (read(fd1[0], &buf, sizeof(int))))
+        int sum=0;
+        int a;
+        int a2;
+        int x;
+        int x2;
+
+        while((x = (read(fd1[0], &a, sizeof(int))) > 0) || (x2 = (read(fd2[0], &a2, sizeof(int))) > 0)){
+            printf("Suma: %d, a: %d, a2: %d\n", sum, a, a2);
+            sum += a+a2;
+            a=0;
+            a2=0;
+        }
+
+        printf("%d\n", sum);
         
     }else{
         int iter=0;
