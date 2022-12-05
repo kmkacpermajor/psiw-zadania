@@ -7,8 +7,10 @@
 int dops = 1;
 
 void handler(){
-    dops = 0;
-    printf("Dostałem");
+    if(dops == 1)
+        dops = 0;
+    else
+        dops = 1;
 }
 
 int main(){
